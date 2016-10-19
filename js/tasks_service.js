@@ -4,7 +4,7 @@ tasksListApp.service("TasksService", function () {
   this.tasks = [
     {
       "id": "0",
-      "description": "First"
+      "description": "Finish everything tomorrow"
     }];
 
   this.createTask = function (description) {
