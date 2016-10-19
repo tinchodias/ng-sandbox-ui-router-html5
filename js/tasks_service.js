@@ -2,7 +2,6 @@
 
 tasksListApp.service("TasksService", function () {
 
-  this.tasksIds = 0;
   this.tasks = [
     {
       "id": "0",
@@ -11,7 +10,7 @@ tasksListApp.service("TasksService", function () {
 
   this.createTask = function (description) {
     var task = new Task(description);
-    task.id = this.tasksIds++;
+    task.id = this.tasks.length;
     return task;
   };
 

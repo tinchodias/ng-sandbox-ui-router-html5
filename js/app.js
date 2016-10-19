@@ -1,7 +1,7 @@
 'use strict';
 
-/* Controllers */
 var tasksListApp = angular.module('tasksListApp', ['ui.router']);
+
 
 tasksListApp.controller('AddTaskController', function (TasksService) {
 
@@ -34,6 +34,3 @@ tasksListApp.controller('EditTaskController', function ($stateParams, $state, Ta
   };
 
 });
-
-  
-  

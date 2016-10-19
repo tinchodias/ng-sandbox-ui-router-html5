@@ -18,5 +18,5 @@ tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvi
       controller: "EditTaskController as editCtrl"
     });
 
-  $locationProvider.html5Mode(true)//.hashPrefix('!')
+  $locationProvider.html5Mode(true)
 });
