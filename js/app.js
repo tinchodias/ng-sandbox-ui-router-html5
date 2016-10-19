@@ -30,7 +30,7 @@ tasksListApp.controller('EditTaskController', function ($stateParams, $state, Ta
 
   this.accept = function () {
     this.task.description = this.description;
-    $state.go("tesksMain");
+    $state.go("tasksMain");
   };
 
 });
