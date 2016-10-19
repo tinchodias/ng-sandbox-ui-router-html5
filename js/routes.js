@@ -16,5 +16,5 @@ tareasListApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
       controller: "EditarTareaController as editarCtrl"
     });
 
-  $locationProvider.html5Mode(true).hashPrefix('!')
+  $locationProvider.html5Mode(true)//.hashPrefix('!')
 });
