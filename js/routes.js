@@ -9,13 +9,13 @@ tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvi
     .state('tasksMain', {
       url: "/tasks",
       templateUrl: "partials/tasks_main.html",
-      controller: "AddTaskController as tasksCtrl"
+      controller: "TasksMainController as tasksCtrl"
     })
 
     .state('taskDetail', {
       url: "/tasks/:id",
       templateUrl: "partials/task_detail.html",
-      controller: "EditTaskController as editCtrl"
+      controller: "TaskDetailController as detailCtrl"
     });
 
   $locationProvider.html5Mode(true)

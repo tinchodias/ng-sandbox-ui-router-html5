@@ -3,7 +3,7 @@
 var tasksListApp = angular.module('tasksListApp', ['ui.router']);
 
 
-tasksListApp.controller('AddTaskController', function (TasksService) {
+tasksListApp.controller('TasksMainController', function (TasksService) {
 
   this.description = '';
   this.tasks = TasksService.tasks;
@@ -17,7 +17,7 @@ tasksListApp.controller('AddTaskController', function (TasksService) {
 });
 
 
-tasksListApp.controller('EditTaskController', function ($stateParams, $state, TasksService) {
+tasksListApp.controller('TaskDetailController', function ($stateParams, $state, TasksService) {
 
   this.task = TasksService.getTaskById($stateParams.id);
 
