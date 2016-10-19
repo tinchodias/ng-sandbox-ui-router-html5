@@ -2,18 +2,18 @@
 
 tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/tasks");
 
   $stateProvider
 
     .state('tasksMain', {
-      url: "/",
+      url: "/tasks",
       templateUrl: "partials/tasks_main.html",
       controller: "AddTaskController as tasksCtrl"
     })
 
     .state('taskDetail', {
-      url: "/task/:id",
+      url: "/tasks/:id",
       templateUrl: "partials/task_detail.html",
       controller: "EditTaskController as editCtrl"
     });
