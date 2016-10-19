@@ -1,4 +1,4 @@
-tareasListApp.config(function ($stateProvider, $urlRouterProvider) {
+tareasListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $urlRouterProvider.otherwise("/");
 
@@ -14,6 +14,7 @@ tareasListApp.config(function ($stateProvider, $urlRouterProvider) {
       url: "/tarea/:id",
       templateUrl: "partials/editar_tarea.html",
       controller: "EditarTareaController as editarCtrl"
-    })
+    });
 
+  $locationProvider.html5Mode(true).hashPrefix('!')
 });
