@@ -22,7 +22,7 @@ tasksListApp.controller('EditTaskController', function ($stateParams, $state, Ta
   this.task = TasksService.getTaskById($stateParams.id);
 
   if (!this.task) {
-    $state.go("addTask");
+    $state.go("tasksMain");
     return;
   }
 
@@ -30,7 +30,7 @@ tasksListApp.controller('EditTaskController', function ($stateParams, $state, Ta
 
   this.accept = function () {
     this.task.description = this.description;
-    $state.go("addTask");
+    $state.go("tesksMain");
   };
 
 });

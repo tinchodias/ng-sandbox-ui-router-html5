@@ -6,15 +6,15 @@ tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvi
 
   $stateProvider
 
-    .state('addTask', {
+    .state('tasksMain', {
       url: "/",
-      templateUrl: "partials/add_task.html",
+      templateUrl: "partials/tasks_main.html",
       controller: "AddTaskController as tasksCtrl"
     })
 
-    .state('editTask', {
+    .state('taskDetail', {
       url: "/task/:id",
-      templateUrl: "partials/edit_task.html",
+      templateUrl: "partials/task_detail.html",
       controller: "EditTaskController as editCtrl"
     });
 
