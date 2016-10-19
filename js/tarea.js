@@ -1,4 +1,4 @@
-var Tarea = function (descripcion) {
-  this.descripcion = descripcion || '';
+var Task = function (description) {
+  this.description = description || '';
 };
 

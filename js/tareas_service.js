@@ -1,22 +1,22 @@
-tareasListApp.service("TareasService", function () {
+tasksListApp.service("TasksService", function () {
 
-  this.tareasIds = 0;
-  this.tareas = [];
+  this.tasksIds = 0;
+  this.tasks = [];
 
-  this.crearTarea = function (description) {
-    var tarea = new Tarea(description);
-    tarea.id = this.tareasIds++;
-    return tarea;
+  this.crearTask = function (description) {
+    var task = new Task(description);
+    task.id = this.tasksIds++;
+    return task;
   };
 
-  this.agregarTarea = function (tarea) {
-    this.tareas.push(tarea);
+  this.agregarTask = function (task) {
+    this.tasks.push(task);
   };
 
-  this.getTareaById = function (id) {
+  this.getTaskById = function (id) {
     
-    return this.tareas.find(function (tarea) {
-      return tarea.id == id;
+    return this.tasks.find(function (task) {
+      return task.id == id;
     })
   };
 

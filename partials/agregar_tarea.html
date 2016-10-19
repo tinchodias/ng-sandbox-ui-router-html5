@@ -1,13 +1,13 @@
 <div>
-  <h4>Agregar Tareas</h4>
+  <h4>Agregar Tasks</h4>
 
   <form>
     <div class="input-group">
-      <input ng-model="tareasCtrl.descripcionTarea" type="text" class="form-control"
-             placeholder="Descripcion de la tarea">
+      <input ng-model="tasksCtrl.descriptionTask" type="text" class="form-control"
+             placeholder="Task description">
 
       <div class="input-group-btn">
-        <button type="submit" class="btn btn-default" ng-click="tareasCtrl.agregarTarea()">
+        <button type="submit" class="btn btn-default" ng-click="tasksCtrl.agregarTask()">
           <span class="glyphicon glyphicon-plus"></span>
         </button>
       </div>
@@ -18,16 +18,16 @@
     <thead>
     <tr>
       <th>Id</th>
-      <th>Descripcion</th>
+      <th>Description</th>
     </tr>
     </thead>
     <tbody>
-    <tr data-ng-repeat="tarea in tareasCtrl.tareas">
+    <tr data-ng-repeat="task in tasksCtrl.tasks">
       <td>
-        <a ui-sref="editarTarea({id: tarea.id})">{{tarea.id}}</a>
+        <a ui-sref="editarTask({id: task.id})">{{task.id}}</a>
       </td>
       <td>
-        <a ui-sref="editarTarea({id: tarea.id})">{{tarea.descripcion}}</a>
+        <a ui-sref="editarTask({id: task.id})">{{task.description}}</a>
       </td>
     </tr>
     </tbody>

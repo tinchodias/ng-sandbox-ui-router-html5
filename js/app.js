@@ -1,36 +1,36 @@
 'use strict';
 
 /* Controllers */
-var tareasListApp = angular.module('tareasListApp', ['ui.router']);
+var tasksListApp = angular.module('tasksListApp', ['ui.router']);
 
-tareasListApp.controller('AgregarTareaController', function (TareasService) {
+tasksListApp.controller('AgregarTaskController', function (TasksService) {
 
-  this.descripcionTarea = '';
-  this.tareas = TareasService.tareas;
+  this.descriptionTask = '';
+  this.tasks = TasksService.tasks;
 
-  this.agregarTarea = function () {
-    var tarea = TareasService.crearTarea(this.descripcionTarea);
-    TareasService.agregarTarea(tarea);
-    this.descripcionTarea = '';
+  this.agregarTask = function () {
+    var task = TasksService.crearTask(this.descriptionTask);
+    TasksService.agregarTask(task);
+    this.descriptionTask = '';
   };
 
 });
 
 
-tareasListApp.controller('EditarTareaController', function ($stateParams, $state, TareasService) {
+tasksListApp.controller('EditarTaskController', function ($stateParams, $state, TasksService) {
 
-  this.tarea = TareasService.getTareaById($stateParams.id);
+  this.task = TasksService.getTaskById($stateParams.id);
 
-  if (!this.tarea) {
-    $state.go("agregarTarea");
+  if (!this.task) {
+    $state.go("agregarTask");
     return;
   }
 
-  this.descripcionTarea = this.tarea.descripcion;
+  this.descriptionTask = this.task.description;
 
   this.aceptar = function () {
-    this.tarea.descripcion = this.descripcionTarea;
-    $state.go("agregarTarea");
+    this.task.description = this.descriptionTask;
+    $state.go("agregarTask");
   };
 
 });
