@@ -1,15 +1,19 @@
 tasksListApp.service("TasksService", function () {
 
   this.tasksIds = 0;
-  this.tasks = [];
+  this.tasks = [
+    {
+      "id": "0",
+      "description": "First"
+    }];
 
-  this.crearTask = function (description) {
+  this.createTask = function (description) {
     var task = new Task(description);
     task.id = this.tasksIds++;
     return task;
   };
 
-  this.agregarTask = function (task) {
+  this.addTask = function (task) {
     this.tasks.push(task);
   };
 

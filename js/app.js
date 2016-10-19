@@ -3,34 +3,34 @@
 /* Controllers */
 var tasksListApp = angular.module('tasksListApp', ['ui.router']);
 
-tasksListApp.controller('AgregarTaskController', function (TasksService) {
+tasksListApp.controller('AddTaskController', function (TasksService) {
 
-  this.descriptionTask = '';
+  this.description = '';
   this.tasks = TasksService.tasks;
 
-  this.agregarTask = function () {
-    var task = TasksService.crearTask(this.descriptionTask);
-    TasksService.agregarTask(task);
-    this.descriptionTask = '';
+  this.addTask = function () {
+    var task = TasksService.createTask(this.description);
+    TasksService.addTask(task);
+    this.description = '';
   };
 
 });
 
 
-tasksListApp.controller('EditarTaskController', function ($stateParams, $state, TasksService) {
+tasksListApp.controller('EditTaskController', function ($stateParams, $state, TasksService) {
 
   this.task = TasksService.getTaskById($stateParams.id);
 
   if (!this.task) {
-    $state.go("agregarTask");
+    $state.go("addTask");
     return;
   }
 
-  this.descriptionTask = this.task.description;
+  this.description = this.task.description;
 
-  this.aceptar = function () {
-    this.task.description = this.descriptionTask;
-    $state.go("agregarTask");
+  this.accept = function () {
+    this.task.description = this.description;
+    $state.go("addTask");
   };
 
 });

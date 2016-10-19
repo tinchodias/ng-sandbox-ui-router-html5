@@ -4,16 +4,16 @@ tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvi
 
   $stateProvider
 
-    .state('agregarTask', {
+    .state('addTask', {
       url: "/",
-      templateUrl: "partials/agregar_task.html",
-      controller: "AgregarTaskController as tasksCtrl"
+      templateUrl: "partials/add_task.html",
+      controller: "AddTaskController as tasksCtrl"
     })
 
-    .state('editarTask', {
+    .state('editTask', {
       url: "/task/:id",
-      templateUrl: "partials/editar_task.html",
-      controller: "EditarTaskController as editarCtrl"
+      templateUrl: "partials/edit_task.html",
+      controller: "EditTaskController as editCtrl"
     });
 
   $locationProvider.html5Mode(true)//.hashPrefix('!')
