@@ -1,3 +1,5 @@
+'use strict';
+
 tasksListApp.service("TasksService", function () {
 
   this.tasksIds = 0;

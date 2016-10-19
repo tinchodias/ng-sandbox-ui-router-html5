@@ -1,3 +1,5 @@
+'use strict';
+
 tasksListApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $urlRouterProvider.otherwise("/");
