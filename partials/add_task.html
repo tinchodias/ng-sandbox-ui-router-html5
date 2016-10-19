@@ -22,10 +22,10 @@
     <tbody>
       <tr data-ng-repeat="task in tasksCtrl.tasks">
         <td>
-          <a ui-sref="editTask({id: task.id})">{{task.id}}</a>
+          <a ui-sref="editTask({id: task.id})"><span ng-bind="task.id"></span></a>
         </td>
         <td>
-          <a ui-sref="editTask({id: task.id})">{{task.description}}</a>
+          <a ui-sref="editTask({id: task.id})"><span ng-bind="task.description"></span></a>
         </td>
       </tr>
     </tbody>
